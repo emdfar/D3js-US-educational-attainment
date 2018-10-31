@@ -80,8 +80,8 @@ text{
 }
 
 label{
-  font-family: "Muli", "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !IMPORTANT;
-     border-radius: 5px !IMPORTANT;
+  font-family: "Times New Roman", "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !IMPORTANT;
+     border-radius: 8px !IMPORTANT;
 }
 
 .radio-toolbar input[type="radio"] {
