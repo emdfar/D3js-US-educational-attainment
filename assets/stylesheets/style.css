@@ -80,7 +80,7 @@ text{
 }
 
 label{
-  font-family: inherit !IMPORTANT;
+  font-family: cursive !IMPORTANT;
      border-radius: 5px !IMPORTANT;
 }
 
@@ -94,7 +94,7 @@ label{
   display: inline-block;
   background-color: #fafad2;
   padding: 5px 15px;
-  font-family: "Times New Roman";
+  font-family: cursive;
   font-size: 20px;
   cursor: pointer;
 }
