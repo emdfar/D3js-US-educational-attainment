@@ -80,7 +80,7 @@ text{
 }
 
 label{
-  font-family: fantasy !IMPORTANT;
+  font-family: inherit !IMPORTANT;
      border-radius: 5px !IMPORTANT;
 }
 
