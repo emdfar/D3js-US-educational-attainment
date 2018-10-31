@@ -20,7 +20,7 @@ function donutChart() {
     var width,
         height,
         margin = {top: 10, right: 10, bottom: 10, left: 10},
-        colour = d3.scaleOrdinal().range(["#0a5971", "#177E89", "#4b8e77", "#a9ad70", "#ccb221", "#cb8b25", "#DB3A34"]),
+        colour = d3.scaleOrdinal() .range(["#0a5971", "#177E89", "#4b8e77", "#a9ad70", "#ccb221", "#cb8b25", "#DB3A34"]),
     //.range(["#0FA3B1", "#7401DF", "#B404AE", "#B4045F", "#585858", "#AC58FA", "#0080FF"]), // colour scheme
         variable, // value in data that will dictate proportions on chart
         category, // compare data by
