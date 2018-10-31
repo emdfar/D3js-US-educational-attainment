@@ -94,13 +94,13 @@ label{
   display: inline-block;
   background-color: #ddd;
   padding: 4px 11px;
-  font-family: "Times New Roman";
+  font-family: "Muli";
   font-size: 16px;
   cursor: pointer;
 }
 
 .radio-toolbar input[type="radio"]:checked+label {
-  background-color: #bbb; 
+  background-color: #ffe4c4; 
 }
 
 
