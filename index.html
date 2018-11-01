@@ -1,5 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+	$("#nav-two a")
+  .each(function(i) {
+    if (i != 0) {
+      $("#sound")
+        .clone()
+        .attr("id", "sound" + i)
+        .appendTo($(this).parent());
+    }
+    $(this).data("beep", i);
+  })
+  .mouseenter(function() {
+    $("#sound" + $(this).data("beep"))[0].play();
+  });
+$("#sound").attr("id", "sound0");
+
+audio {display: none;}
 
 <head>
     <meta charset="UTF-8">
@@ -7,11 +23,18 @@
     <link href="assets/stylesheets/style.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 </head>
-	</script type="text/javascript" src= "sound-mouseover.js"></script>
+	
 <header>
        <nav>
     <ul>
+	    <ul id="nav-two" class="nav">
+		     <li>
+        <a href="#">Home</a>
+        <audio id="sound" controls preload="auto"><source src="http://soundbible.com/mp3/MP5_SMG-GunGuru-703432894.mp3" controls></source></audio>
+    </li>
 	    
 <li><a href="#top" >Top</a></li>
 <li><a href="#national">National</a></li>
@@ -23,13 +46,7 @@
  
 <body>
 	
-	<a href="about.htm"
-	 onmouseover="playclip();">
-		Mouseover Sound Link</a><br>
 	
-	<a href="about.html"
-	   onmouseover="playclip();">
-	</a><br>
     <h1 class="title">Educational Attainment in the United States</h1>
         
 	
@@ -93,13 +110,6 @@
 /* scrollTop() >= 240
    Should be equal the the height of the header
  */
-</script>
-	<audio>
-	  <source src="button-20.mp3"></source>
-          <source src="buton-20.ogg"></source>
-</audio>
-	       
-	       <div id="sounddiv"><bgsound id="sound"></div>
 
 </body>
 </html>
