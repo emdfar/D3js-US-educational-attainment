@@ -1,21 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-	$("#nav-two a")
-  .each(function(i) {
-    if (i != 0) {
-      $("#sound")
-        .clone()
-        .attr("id", "sound" + i)
-        .appendTo($(this).parent());
-    }
-    $(this).data("beep", i);
-  })
-  .mouseenter(function() {
-    $("#sound" + $(this).data("beep"))[0].play();
-  });
-$("#sound").attr("id", "sound0");
-
-audio {display: none;}
 
 <head>
     <meta charset="UTF-8">
@@ -24,17 +8,19 @@ audio {display: none;}
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+	
 </head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <style type="text/css">audio {display: none;}</style>
 	
 <header>
-       <nav>
-    <ul>
-	    <ul id="nav-two" class="nav">
-		     <li>
+	<ul id="nav-two" class="nav">
+    <li>
         <a href="#">Home</a>
         <audio id="sound" controls preload="auto"><source src="http://soundbible.com/mp3/MP5_SMG-GunGuru-703432894.mp3" controls></source></audio>
     </li>
+       <nav>
+    <ul>
 	    
 <li><a href="#top" >Top</a></li>
 <li><a href="#national">National</a></li>
@@ -105,6 +91,22 @@ audio {display: none;}
     });
 });
 	
+	<script>
+$("#nav-two a")
+  .each(function(i) {
+    if (i != 0) {
+      $("#sound")
+        .clone()
+        .attr("id", "sound" + i)
+        .appendTo($(this).parent());
+    }
+    $(this).data("beep", i);
+  })
+  .mouseenter(function() {
+    $("#sound" + $(this).data("beep"))[0].play();
+  });
+$("#sound").attr("id", "sound0");
+</script>
 	
 
 /* scrollTop() >= 240
