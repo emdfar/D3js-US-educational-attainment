@@ -10,22 +10,16 @@
 	
 	
 </head>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-    <style type="style/css">audio {display: none;}</style>
 	
 <header>
-	<ul id="nav-two" class="nav">
-    <li>
-       
-        <audio id="s" controls preload="auto"><source src="http://soundbible.com/mp3/MP5_SMG-GunGuru-703432894.mp3" controls></source></audio>
-    </li>
-       <nav>
+        
+    <nav>
     <ul>
 	    
-<li><a href="#top" >Top</a></li>
-<li><a href="#national">National</a></li>
-<li><a href="#regional">Regional</a></li>
-<li><a href="#state">State-Level</a></li> 
+<li><a href="#top" onmouseover="playclip();" >Top</a></li>  
+<li><a href="#national" onmouseover="playclip();" >National</a></li> 
+<li><a href="#regional" onmouseover="playclip();" >Regional</a></li>
+<li><a href="#state" onmouseover="playclip();" >State-Level</a></li> 
       
     <ul>
         </nav>
@@ -91,23 +85,10 @@
     });
 });
 	
-	<script>
-$("#nav-two a")
-  .each(function(i) {
-    if (i != 0) {
-      $("#sound")
-        .clone()
-        .attr("id", "sound" + i)
-        .appendTo($(this).parent());
-    }
-    $(this).data("button-20", i);
-  })
-  .mouseenter(function() {
-    $("#sound" + $(this).data("button-20"))[0].play();
-  });
-$("#sound").attr("id", "sound0");
-</script>
-	
+	<audio>
+	  <source src="button-20.mp3"></source>
+          <source src="button-20.ogg"></source>
+ </audio>
 
 /* scrollTop() >= 240
    Should be equal the the height of the header
