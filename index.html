@@ -81,8 +81,10 @@
     });
 });
 	
-	var audio = document.getElementById("button-20");
-audio.play();
+	var audio = $("#button-20")[0];
+$("nav a").mouseenter(function() {
+  audio.play();
+});
 
 /* scrollTop() >= 240
    Should be equal the the height of the header
