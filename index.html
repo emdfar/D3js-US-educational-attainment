@@ -11,13 +11,13 @@
 	
 </head>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-    <style type="text/css">audio {display: none;}</style>
+    <style type="style/css">audio {display: none;}</style>
 	
 <header>
 	<ul id="nav-two" class="nav">
     <li>
-        <a href="#">Home</a>
-        <audio id="sound" controls preload="auto"><source src="http://soundbible.com/mp3/MP5_SMG-GunGuru-703432894.mp3" controls></source></audio>
+       
+        <audio id="s" controls preload="auto"><source src="http://soundbible.com/mp3/MP5_SMG-GunGuru-703432894.mp3" controls></source></audio>
     </li>
        <nav>
     <ul>
@@ -100,10 +100,10 @@ $("#nav-two a")
         .attr("id", "sound" + i)
         .appendTo($(this).parent());
     }
-    $(this).data("beep", i);
+    $(this).data("button-20", i);
   })
   .mouseenter(function() {
-    $("#sound" + $(this).data("beep"))[0].play();
+    $("#sound" + $(this).data("button-20"))[0].play();
   });
 $("#sound").attr("id", "sound0");
 </script>
