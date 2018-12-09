@@ -1,7 +1,6 @@
 <script>
-var pie = new d3pie("pieChart", {
-	<script src="d3pie.min.js"></script>
-<script>
+var donut = new d3pie("pieChart", {
+	
 	"header": {
 		"title": {
 			"text": "Educational Attainment in the United States",
